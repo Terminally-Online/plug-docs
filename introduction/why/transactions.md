@@ -13,7 +13,7 @@ head:
 
 # Transaction Types
 
-For the longest time interaction with the blockchain has been limited to basic actions without conditions. A user clicks a button or two and a transaction is submit and executed in response. With the introduction of [Plug](/plugs/introduction) there is a new paradigm where the user gains newfound control to append conditions that must be met in order to execute the transaction.
+Since day one, interaction with EVM blockchains has been limited to basic linear actions. A user clicks a button or two and a transaction is submit and executed in response. With the introduction of [Plug](/plugs/introduction), there is a new paradigm where the user gains control to append conditions that must be met in order to execute the transaction.
 
 [Imperative transactions](#imperative-transactions) are the bread and butter of blockchain. They're the simplest, most direct way to make something happen. They're the starting point for anyone new to blockchain and will likely remain the most commonly used form of transaction for at least the next few years. However, they aren't perfect.
 

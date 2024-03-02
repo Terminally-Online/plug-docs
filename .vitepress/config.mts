@@ -48,11 +48,11 @@ export default defineConfig({
             items: [
               {
                 text: "Transaction Types",
-                link: "/introduction/transactions",
+                link: "/introduction/why/transactions",
               },
               {
                 text: "Passive Management",
-                link: "/introduction/passive-management",
+                link: "/introduction/why/passive-management",
               },
             ]
           },
@@ -201,7 +201,11 @@ export default defineConfig({
             collapsed: true,
             items: [
               {
-                text: "execute",
+                text: "simulate",
+                link: "/core/solvers/simulate",
+              },
+              {
+                text: "solve",
                 link: "/core/solvers/solve",
               },
               {
