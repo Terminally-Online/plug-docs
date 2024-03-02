@@ -43,9 +43,12 @@ export default defineConfig({
           },
           {
             text: "Why Plug",
-            link: "/introduction/why-plug",
-            collapsed: true,
+            collapsed: false,
             items: [
+              {
+                text: "The Problem and Solution",
+                link: "/introduction/why-plug",
+              },
               {
                 text: "Transaction Types",
                 link: "/introduction/why/transactions",
