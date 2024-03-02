@@ -39,7 +39,7 @@ bun i @nftchance/plug-core
 
 :::
 
-## Signing an Intent
+### Signing an Intent
 
 With your target contract prepared, it is now time to configure the conditions under which the transaction can be executed and distribute the fuses. Let's go ahead and declare the fuse tree for our intent and allow execution to safely be by an account in the Executor pool:
 
@@ -83,7 +83,7 @@ When you're ready, all you have to do is run a single line of code like:
 plugs.submit();
 ```
 
-## Streaming Intents
+### Streaming Intents
 
 On the other side of things, [Solvers](/core/solvers) have the ability to listen for newly created intents that can be submit onchain. Using the same framework used to sign intents, a [Solver](/core/solvers) can open a connection to the distribution WebSocket with:
 
