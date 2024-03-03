@@ -5,7 +5,7 @@ Submit a bundle of [LivePlugs](/generated/base-types/LivePlugs) to a [Socket](/c
 ## Parameters
 
 - `$livePlugs`: The signed bundle of [Plugs](/generated/base-types/Plugs) to execute.
-- `$livePlugs[]`: `overloaded`: A batch of signed bundles of [Plugs](/generated/base-types/Plugs) to execute.
+- `$livePlugs`:overloaded`: A batch of signed bundles of [Plugs](/generated/base-types/Plugs) to execute.
 
 ## Returns
 
@@ -23,12 +23,11 @@ The simplest interaction method comes in the form of single-intent settlement wi
 ::: code-group
 
 ```solidity [plug (single)]
-function plug(PlugTypesLib.LivePlugs calldata $livePlugs)
-  public
-  payable
-  virtual
-  returns (bytes[] memory $results)
-{
+function plug(
+  PlugTypesLib.LivePlugs calldata $livePlugs
+) public payable virtual returns (
+  bytes[] memory $results
+) {
   uint256 gas = gasleft();
 
   PlugSocketInterface socket =
@@ -47,12 +46,11 @@ function plug(PlugTypesLib.LivePlugs calldata $livePlugs)
 ```
 
 ```solidity [plug (batch)]
-function plug(PlugTypesLib.LivePlugs[] calldata $livePlugs)
-  public
-  payable
-  virtual
-  returns (bytes[][] memory $results)
-{
+function plug(
+  PlugTypesLib.LivePlugs[] calldata $livePlugs
+) public payable virtual returns (
+  bytes[][] memory $results
+) {
   uint256 i;
   uint256 length = $livePlugs.length;
   $results = new bytes[][](length);
