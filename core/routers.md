@@ -21,15 +21,10 @@ Without a `Router`, [Solvers](/core/solvers) would have to run a transaction for
 
 An important benefit of a `Router` model is that it means there is no need for protocols already deployed to update nor is there a need for new protocols to integrate a piece of [Plug](/) directly. Instead, every contract deployed can be interacted with easily.
 
-With localization, for a protocol to support intents there would have to be a wrapper for every connection. There would need to be a mechanism that enables the protocol to recover the sender from the message forwarded by the [Solver](/core/solvers).
+With execution localization, for a protocol to support intents there would have to be a wrapper for every connection. There would need to be a mechanism that enables the protocol to recover the sender from the message forwarded by the [Solver](/core/solvers) which is not ideal due to the blocking experienced by all contracts already deployed as well as those that do not include the logic on their own. This assumption and need would improperly place the onus of development and integration on protocols.
 
-Instead, a user of [Plug](/) simply signs a message for their [Vault](/instances/vaults) and execution is automatically routed through it. There's no sender recovery mechanism within the action. All actions are properly attributed without abstraction.
+Instead, a user of [Plug](/) simply signs a message for their [Vault](/instances/vaults) and execution is automatically routed through it enabling the instant support for ~100% of smart contracts deployed. There's no sender recovery mechanism within any of the protocols. All actions are properly attributed without abstraction without introducing new risks like [ERC-2771](https://eips.ethereum.org/EIPS/eip-2771) does.
 
-[Plug](/) is designed to make the primitives and protocols of the industry more powerful. Therefore, there is no integration expectation or new overhead introduced.
+To enable this, a `Router` contains key functions that enable execution on behalf of [Sockets](/core/sockets) with:
 
-If a protocol wants to be supported, they can be without making a single change to their onchain implementation. With even the deepest level of integration, the only thing required is the development of a [Fuse](/core/fuses) which is not an obligation or expectation the consumed protocol itself carries.
-
-To enable this, a `Router` contains to key functions that enable execution on behalf of [Sockets](/core/sockets):
-
-- [plug](/core/routers/plug): Execute a single [LivePlugs](/generated/base-types/LivePlugs) bundle.
-- [batch](/core/routers/batch): Execute a batch of [LivePlugs](/generated/base-types/LivePlugs) bundles.
+- [plug](/core/routers/plug): Execute [LivePlugs](/generated/base-types/LivePlugs) bundles in a single or batched method.

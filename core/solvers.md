@@ -27,9 +27,3 @@ For `Solvers` there are two key processes:
 - `Execution`: Submit the transaction onchain.
 
 Today, [Plug](/) is built with `Exclusive Solvers` in mind. When signing an intent, if a `Solver` is needed or wanted, their address is included inside of the intent that has been signed. If someone other than the allowed `Solver` tries to submit the intent onchain themselves it will revert and have no effect on the blockchains state.
-
-::: tip
-
-An auction market will be in place following several more iterations. At this time, [Plug](/) is focused on nailing down the rest of the system before offering open access to `Solvers`.
-
-:::
