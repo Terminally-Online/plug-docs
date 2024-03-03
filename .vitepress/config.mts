@@ -25,8 +25,8 @@ function getItems(directory: string) {
 }
 
 export default defineConfig({
-  title: "Plug Documentation",
-  description: "Documentation for the Plug protocol.",
+  title: "Plug",
+  description: "Documentation for the Plug protocol and application.",
   appearance: "dark",
   themeConfig: {
     logo: { light: "/logo-dark.svg", dark: "/logo-white.svg" },
@@ -158,10 +158,6 @@ export default defineConfig({
             collapsed: true,
             items: [
               {
-                text: "simulate",
-                link: "/core/solvers/simulate",
-              },
-              {
                 text: "solve",
                 link: "/core/solvers/solve",
               },
@@ -260,6 +256,7 @@ export default defineConfig({
   // * Load the font files.
   transformHead({ assets }) {
     const myFontFile = assets.find(() => /Satoshi-Variable\.\w+\.woff2/);
+
     if (myFontFile) {
       return [
         [

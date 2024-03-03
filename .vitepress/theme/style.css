@@ -67,19 +67,21 @@ h1,
 h2 {
   font-weight: 900 !important;
 }
+
 h3,
 h4,
 h5,
 h6 {
   font-weight: 700 !important;
 }
+
 strong {
   font-weight: 700 !important;
 }
 
 :root {
-  --vp-font-family-base: "Satoshi", var(--font-fallback);
-  --vp-font-family-mono: "Satoshi", var(--font-fallback);
+  /* --vp-font-family-base: "Satoshi", var(--font-fallback); */
+  /* --vp-font-family-mono: "Satoshi", var(--font-fallback); */
 
   --vp-c-default-1: #121111;
   --vp-c-default-2: #1a1919;
