@@ -172,14 +172,6 @@ export default defineConfig({
                 link: "/instances/deployable/deterministic"
               },
               {
-                text: "JIT Deployment",
-                link: "/instances/deployable/just-in-time-deployment"
-              },
-              {
-                text: "Contract Addresses",
-                link: "/instances/deployable/addresses"
-              },
-              {
                 text: "Fuses",
                 collapsed: true,
                 items: [
@@ -211,26 +203,6 @@ export default defineConfig({
                   },
                 ]
               },
-              {
-                text: "Routers",
-                collapsed: true,
-                items: [
-                  {
-                    text: "Vaults",
-                    link: "/instances/vaults"
-                  },
-                ]
-              },
-              {
-                text: "Solvers",
-                collapsed: true,
-                items: [
-                  {
-                    text: "Vaults",
-                    link: "/instances/vaults"
-                  },
-                ]
-              }
             ],
           },
         ],
